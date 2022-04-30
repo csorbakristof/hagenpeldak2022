@@ -1,0 +1,31 @@
+
+public class Hello {
+
+	private int a;
+	private static int b;
+	
+	public static void main(String[] args) {
+		Person.staticShow();
+		
+		Person macilaci = new Person(12);
+		Person drBubo = new Person(11);
+		Person macilaci2 = macilaci;
+
+		Person.staticShow();
+
+		macilaci.show();
+		macilaci2.show();
+		
+		Hello h = new Hello();
+		h.a=5;
+		
+		for(int i=0; i<5; i++)
+			write(i);
+	}
+
+	public static void write(int i)
+	{
+		System.out.println("Hello, i="+i);
+	}
+}
+

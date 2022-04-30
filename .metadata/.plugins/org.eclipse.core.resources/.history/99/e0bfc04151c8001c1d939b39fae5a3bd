@@ -1,0 +1,30 @@
+
+public class Person implements Cloneable {
+	public int Age;
+	public static int Counter = 0;
+		// Minden letrehozott Person darabszama
+	
+	Person(int age)
+	{
+		this.Age = age;
+		Counter++;
+	}
+	
+	void show()
+	{
+		System.out.println("Person, Age="+this.Age+
+				", Counter="+Counter);
+	}
+	
+	public static void staticShow()
+	{
+		System.out.println("Counter="+Counter);
+	}
+	
+	public Person clone()
+	{
+		Person clone = new Person(this.Age);
+		//clone.Age = this.Age;
+		return clone;
+	}
+}
